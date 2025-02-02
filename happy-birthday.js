@@ -298,26 +298,41 @@ function triggerTransition() {
   // Add a fade-out to the canvas (if not already handled by its CSS)
   c.classList.add("fade-out"); // (Ensure your CSS defines .fade-out with transition on opacity)
 
-  // Get the next section element
-  const nextSection = document.getElementById("nextSection");
+  // Get the child elements.
+  const slideshow = document.getElementById("slideshow");
+  const funFact = document.getElementById("funFact");
   
-  // Immediately set the next section to be visible and ready for fading in
-  nextSection.style.display = "block";
-  // Set a background so no white flash appears
-  nextSection.style.background = "linear-gradient(135deg, #1a0033, #000000)";
-  
-  // Make sure its opacity starts at 0
-  nextSection.style.opacity = 0;
-  // Set a smooth transition for opacity (if not already in your CSS)
-  nextSection.style.transition = "opacity 1s ease-in-out";
-  
-  // Start fading in the next section almost immediately
-  nextSection.style.opacity = 1;
+  // Remove any inline styles that might hide them (if needed)
+  // and then add a class or directly set their opacity.
+  slideshow.style.opacity = 1;  // With CSS transition, this will fade in
+  funFact.style.opacity = 1;
 
   // Hide the canvas after the fade-in has had time to complete
   setTimeout(() => {
     c.style.display = "none";
   }, 1050);
+}
+
+function showFunFactPrompt() {
+  // Stop the fireworks animation loop if necessary
+  // (Assuming the loop is controlled by your anim() function and "done" condition.)
+  
+  // Get the fun fact prompt overlay element.
+  const funFactPrompt = document.getElementById("funFactPrompt");
+  
+  // Remove the "hidden" class and force the element to be visible.
+  funFactPrompt.classList.remove("hidden");
+  funFactPrompt.classList.add("visible");
+  
+  // Attach a click listener to the button inside the prompt.
+  const funFactBtn = document.getElementById("funFactBtn");
+  funFactBtn.addEventListener("click", function() {
+    // When the button is clicked, trigger the transition.
+    triggerTransition();
+    
+    // Optionally hide the prompt overlay (or let the transition hide it automatically).
+    funFactPrompt.style.display = "none";
+  });
 }
 
 
@@ -345,7 +360,7 @@ function anim() {
   ctx.restore();
 
   if (done) {
-    setTimeout(triggerTransition, 1500);
+    setTimeout(showFunFactPrompt, 1500);
     return;
   }
 }

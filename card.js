@@ -24,10 +24,5 @@
       }
     }
     
-    // Delay before showing the card and starting the typewriter effect (3000 ms = 3 seconds)
-    setTimeout(function() {
-      cardEl.classList.remove('hidden');
-      typeLetter();
-    }, 3000);
   })();
   

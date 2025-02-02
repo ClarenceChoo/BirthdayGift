@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="happy-birthday.css" />
     <title>Happy Birthday</title>
   </head>
@@ -10,7 +11,12 @@
     <!-- Fireworks Canvas (initial section) -->
     <canvas id="c"></canvas>
     
-    <!-- Next Section: Hidden initially; will appear after fireworks finish -->
+    <!-- Fun Fact Prompt Overlay (hidden initially) -->
+    <div id="funFactPrompt" class="hidden">
+      <button id="funFactBtn">Want to hear a fun fact?</button>
+    </div>
+    
+    <!-- Next Section: Hidden initially; will appear after prompt is clicked -->
     <div id="nextSection" class="hidden">
       <!-- Background slideshow -->
       <div id="slideshow"></div>
@@ -20,7 +26,7 @@
         <p id="funFactText"></p>
       </div>
       
-      <!-- Card/Letter (initially hidden; appears after delay) -->
+      <!-- Card/Letter (initially hidden) -->
       <div id="card" class="hidden">
         <p id="letterText"></p>
       </div>
@@ -43,12 +49,10 @@
     <script>
       // When the user taps the Start button:
       document.getElementById("startBtn").addEventListener("click", function () {
-        // Start background music
         const bgMusic = document.getElementById("bgMusic");
         bgMusic.play();
-        // Hide the start overlay
         document.getElementById("startOverlay").style.display = "none";
-        // Start the fireworks animation (and subsequent animation sequence)
+        // Start the fireworks animation (the animation loop)
         startFireworks();
       });
     </script>
