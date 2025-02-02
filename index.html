@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="happy-birthday.css" />
+    <title>Happy Birthday</title>
+  </head>
+  <body>
+    <!-- Fireworks Canvas (initial section) -->
+    <canvas id="c"></canvas>
+    
+    <!-- Next Section: Hidden initially; will appear after fireworks finish -->
+    <div id="nextSection" class="hidden">
+      <!-- Background slideshow -->
+      <div id="slideshow"></div>
+      
+      <!-- Fun Fact section (appears first in next section) -->
+      <div id="funFact">
+        <p id="funFactText"></p>
+      </div>
+      
+      <!-- Card/Letter (initially hidden; appears after delay) -->
+      <div id="card" class="hidden">
+        <p id="letterText"></p>
+      </div>
+    </div>
+    
+    <!-- Background Music (hidden audio element) -->
+    <audio id="bgMusic" src="assets/music/Princess Mononoke Main Theme.mp3" loop></audio>
+    
+    <!-- Start Overlay (appears before anything starts) -->
+    <div id="startOverlay">
+      <button id="startBtn">Tap to Start</button>
+      <p id="volumeDisclaimer">Please turn on your volume</p>
+    </div>
+    
+    <!-- Include JavaScript files -->
+    <script src="happy-birthday.js"></script>
+    <script src="slideshow.js"></script>
+    <script src="funfact.js"></script>
+    <script src="card.js"></script>
+    <script>
+      // When the user taps the Start button:
+      document.getElementById("startBtn").addEventListener("click", function () {
+        // Start background music
+        const bgMusic = document.getElementById("bgMusic");
+        bgMusic.play();
+        // Hide the start overlay
+        document.getElementById("startOverlay").style.display = "none";
+        // Start the fireworks animation (and subsequent animation sequence)
+        startFireworks();
+      });
+    </script>
+  </body>
+</html>
