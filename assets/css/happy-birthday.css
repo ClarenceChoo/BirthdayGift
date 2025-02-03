@@ -114,7 +114,7 @@ body {
   max-width: 80%;
   width: 400px; /* or use a percentage if you prefer a responsive width */
   background: rgba(255, 255, 255, 0.75); /* Slightly off-white for a soft look */
-  padding: 20px 30px;
+  padding: 15px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   font-family: 'Montserrat', sans-serif; /* Use your chosen font */
@@ -132,6 +132,32 @@ body {
   font-size: 1.1rem;
 }
 
+
+/* Continue Button styling */
+#continueBtn {
+  background-color: rgba(0, 188, 212, 0.75); /* Updated to use RGBA with 75% opacity */
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, opacity 1s ease;
+  margin: 20px auto;
+  display: block;
+  opacity: 0; /* Start hidden */
+  pointer-events: none;
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+/* When we want the button to be visible */
+#continueBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* Card (Letter) styling */
 #card {
   position: absolute;
@@ -140,8 +166,8 @@ body {
   transform: translateX(-50%);
   z-index: 2;
   max-width: 90%;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 15px;
   border-radius: 8px;
   font-size: 1.2rem;
   color: #333;
@@ -151,6 +177,12 @@ body {
 /* Ensure the card remains hidden initially */
 #card.hidden {
   display: none;
+}
+
+#card p {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
 }
 
 /* Start Overlay styling */

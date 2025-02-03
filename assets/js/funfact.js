@@ -15,17 +15,19 @@
       funFactTextEl.textContent += funFactContent.charAt(index);
       index++;
       setTimeout(typeLetter, 50);  // Adjust typing speed (50ms per character)
+    } else {
+      // Once done typing, show the continue button.
+      const continueBtn = document.getElementById("continueBtn");
+      continueBtn.classList.remove("hidden");
+      continueBtn.classList.add("visible");
     }
   }
   
   // Attach a click event to the fun fact button.
-  // When clicked, clear the text, reset the index, and start the typewriter effect.
+  // When clicked, clear any existing text, reset the counter, and start the typewriter effect.
   funFactBtn.addEventListener("click", function() {
-    // Clear any previously typed text and reset the counter.
     funFactTextEl.textContent = "";
     index = 0;
     typeLetter();
   });
 })();
-
-  
