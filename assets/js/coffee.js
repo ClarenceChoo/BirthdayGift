@@ -1,3 +1,14 @@
+document.getElementById("askOutBtn").addEventListener("click", function () {
+  // Hide the envelope section
+  document.getElementById("envelope").classList.add("hidden");
+  
+  // Hide the ask-out button as well
+  this.classList.add("hidden");
+  
+  // Reveal the form section
+  document.getElementById("coffeeForm").classList.remove("hidden");
+});
+
 // Global variable to store the clicked button's value
 let selectedResponse = null;
 

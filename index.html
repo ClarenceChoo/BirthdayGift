@@ -25,7 +25,7 @@
       <div id="funFact">
         <p id="funFactText"></p>
         <!-- New Continue Button -->
-        <button id="continueBtn" class="hidden">Read my letter</button>
+        <button id="continueBtn" class="hidden">There's more...</button>
       </div>
 
       <!-- Card/Letter (initially hidden) -->
@@ -34,9 +34,22 @@
           <div class="envelope-body"></div>
           <div class="letter">
             <div class="letter-content" id="letterContent"></div>
+            <hr id="hrLine" class="hidden">
+            <!-- New Button: Ask her out -->
+            <button id="askOutBtn" class="hidden">One last thing</button>
           </div>
         </div>
       
+        <!-- Ask for outing -->
+        <form id="coffeeForm" class="hidden">
+          <input type="hidden" name="_subject" value="Coffee Response" />
+          <input type="hidden" name="_format" value="json" />
+          <p>Would you like to grab coffee sometime?</p>
+          <button type="submit" name="response" value="Yes">Yes</button>
+          <button type="submit" name="response" value="No">No</button>
+        </form>
+        <p id="formMessage"></p>    
+
     <!-- Background Music (hidden audio element) -->
     <audio id="bgMusic" src="assets/music/Princess Mononoke Main Theme.mp3" loop></audio>
     
@@ -46,15 +59,6 @@
       <p id="volumeDisclaimer">Please turn on your volume</p>
     </div>
     
-    <!-- Ask for outing -->
-    <!-- <form id="coffeeForm">
-          <input type="hidden" name="_subject" value="Coffee Response" />
-          <input type="hidden" name="_format" value="json" />
-          <p>Would you like to grab coffee sometime?</p>
-          <button type="submit" name="response" value="Yes">Yes</button>
-          <button type="submit" name="response" value="No">No</button>
-        </form>
-        <p id="formMessage"></p>     -->
 
     <!-- Include JavaScript files -->
     <script src="./assets/js/happy-birthday.js"></script>

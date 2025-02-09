@@ -22,6 +22,11 @@ With all my best wishes,
       letterContent.textContent += letterMessage.charAt(index);
       index++;
       setTimeout(typeLetter, 50); // Adjust typing speed (50ms per character)
+    } else {
+        document.getElementById("hrLine").classList.remove("hidden");
+        document.getElementById("hrLine").classList.add("visible");
+        document.getElementById("askOutBtn").classList.remove("hidden");
+        document.getElementById("askOutBtn").classList.add("visible");
     }
   }
 
