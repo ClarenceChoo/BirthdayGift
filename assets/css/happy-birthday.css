@@ -220,7 +220,7 @@ body {
 
 .letter-content {
   padding: 20px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: 'Montserrat', sans-serif; /* Use your chosen font */
   color: #333;
   line-height: 1.3;
@@ -280,15 +280,23 @@ body {
    Coffee Form Section (Ask for Outing)
 ---------------------------------*/
 #coffeeForm {
-  background: rgba(255, 255, 255, 0.9); /* A mostly opaque white background */
-  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the box both vertically and horizontally */
+  max-width: 80%;
+  width: 400px; /* or use a percentage if you prefer a responsive width */
+  background: rgba(255, 255, 255, 0.75); /* Slightly off-white for a soft look */
+  padding: 15px 20px;
   border-radius: 10px;
-  max-width: 400px;
-  margin: 20px auto;                   /* Centers the form */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  text-align: center;                  /* Center text inside the form */
-  display: none;                       /* Start hidden (using display:none) */
-  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: 'Montserrat', sans-serif; /* Use your chosen font */
+  color: #333;
+  text-align: center;
+  line-height: 1.5;
+  z-index: 2;
+  opacity: 0;              /* Start hidden */
+  transition: opacity 1.5s ease-in-out;
 }
 
 #coffeeForm p {
@@ -307,6 +315,30 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   margin: 10px;
   transition: transform 0.3s ease;
+}
+
+/* Final Message Section Styling */
+#finalMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 182, 193, 0.75);
+  color: #333; /* Deep charcoal for a refined contrast */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;              /* Start hidden */
+  transition: opacity 1.5s ease-in-out;
+  z-index: 3;
+}
+
+/* Visible state for final message */
+#finalMessage.visible {
+  opacity: 1;
 }
 
 /* Start Overlay styling */

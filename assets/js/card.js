@@ -7,12 +7,13 @@
   
 Happy 21st Birthday!
 
-I know how much you love hiking, daisies, and the Flower Dome in Singapore.
-Your passion and dedication to becoming an occupational therapist inspire me every day.
-May this new year of life bring you adventures, joy, and success.
+Today, I want to celebrate the wonderful and kind person you are. 
+Your passion for volunteering and helping others is truly amazing, inspiring everyone around you. 
+Even though we don't talk every day, every interaction with you reminds me of your warm heart and the genuine care you extend to others.
+I hope this new year brings you countless moments of joy and adventures!
 
 With all my best wishes,
-[Your Name]`;
+Clarence`;
 
   let index = 0;
 

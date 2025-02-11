@@ -41,14 +41,21 @@
         </div>
       
         <!-- Ask for outing -->
-        <form id="coffeeForm" class="hidden">
-          <input type="hidden" name="_subject" value="Coffee Response" />
-          <input type="hidden" name="_format" value="json" />
-          <p>Would you like to grab coffee sometime?</p>
-          <button type="submit" name="response" value="Yes">Yes</button>
-          <button type="submit" name="response" value="No">No</button>
-        </form>
-        <p id="formMessage"></p>    
+        <div id = "coffeeForm" class="hidden">
+          <form id="coffeeQuestion">
+            <input type="hidden" name="_subject" value="Coffee Response" />
+            <input type="hidden" name="_format" value="json" />
+            <p>Would you like to go out with me sometime?</p>
+            <button type="submit" name="response" value="Yes">Yes</button>
+            <button type="submit" name="response" value="No">No</button>
+          </form>
+          <p id="formMessage"></p>
+      </div>
+      
+      <!-- Final Section: Hidden initially -->
+      <div id="finalMessage" class="hidden">
+        <p>I hope you like this!</p>
+      </div>
 
     <!-- Background Music (hidden audio element) -->
     <audio id="bgMusic" src="assets/music/Princess Mononoke Main Theme.mp3" loop></audio>

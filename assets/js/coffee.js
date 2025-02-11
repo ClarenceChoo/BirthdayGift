@@ -7,19 +7,20 @@ document.getElementById("askOutBtn").addEventListener("click", function () {
   
   // Reveal the form section
   document.getElementById("coffeeForm").classList.remove("hidden");
+  document.getElementById("coffeeForm").style.opacity = 1;
 });
 
 // Global variable to store the clicked button's value
 let selectedResponse = null;
 
 // Add a click listener to each submit button to capture its value
-document.querySelectorAll("#coffeeForm button[type='submit']").forEach(button => {
+document.querySelectorAll("#coffeeQuestion button[type='submit']").forEach(button => {
   button.addEventListener("click", function(e) {
     selectedResponse = e.target.value;
   });
 });
 
-document.getElementById("coffeeForm").addEventListener("submit", function (e) {
+document.getElementById("coffeeQuestion").addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent the default form submission (redirect)
   
   // Create FormData from the form.
@@ -52,11 +53,31 @@ document.getElementById("coffeeForm").addEventListener("submit", function (e) {
       }
     })
     .then(data => {
-      document.getElementById("formMessage").textContent = "Thank you for your response: " + formData.get("response");
+      document.getElementById("formMessage").textContent = "Thank you for your response!";
       console.log("Response submitted:", data);
+      // After a short delay, transition to the final message section.
+      setTimeout(showFinalMessage, 1500);
     })
     .catch(error => {
       document.getElementById("formMessage").textContent = "There was an error submitting the form.";
       console.error("Error:", error);
     });
 });
+
+function showFinalMessage() {
+  // Hide the coffee form
+  const coffeeForm = document.getElementById("coffeeForm");
+  coffeeForm.classList.add("hidden");
+  
+  // Show the final message section by removing the hidden class and adding visible
+  const finalMessage = document.getElementById("finalMessage");
+  finalMessage.classList.remove("hidden");
+  
+  // Ensure the element is in the layout (if it was set to display: none, set it to block)
+  finalMessage.style.display = "block";
+  
+  // Trigger the opacity transition
+  setTimeout(() => {
+    finalMessage.classList.add("visible");
+  }, 50); // slight delay to ensure display change takes effect
+}

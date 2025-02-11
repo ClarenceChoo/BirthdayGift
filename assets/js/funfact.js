@@ -5,7 +5,7 @@
   const funFactBtn = document.getElementById('funFactBtn');
   
   // Define the fun fact content.
-  const funFactContent = "Did you know? March 3rd is celebrated as World Wildlife Day—a day to appreciate and protect our natural wonders. A unique date where both the month and day are identical! What a coincidence since you like nature a lot too!😆";
+  const funFactContent = "Did you know? March 3rd is celebrated as World Wildlife Day—a day to appreciate and protect our natural wonders. A unique date where both the month and day are identical! What a coincidence since you like nature a lot too! 😆";
   
   let index = 0;
   
