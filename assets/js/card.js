@@ -7,13 +7,13 @@
   
 Happy 21st Birthday!
 
-Today, I want to celebrate the wonderful and kind person you are. 
-Your passion for volunteering and helping others is truly amazing, inspiring everyone around you. 
-Even though we don't talk every day, every interaction with you reminds me of your warm heart and the genuine care you extend to others.
-I hope this new year brings you countless moments of joy and adventures!
+Today, I want to celebrate the most wonderful person I know. 
+Your dedication to volunteering and helping others is truly amazing, they're constant reminders of how beautiful the world can be. 
+Even though we don't talk every day, every interaction with you fills me with hope warms my heart.
+To making more memories with you, I hope this new year brings you countless moments of joy and adventures!
 
 With all my best wishes,
-Clarence`;
+Clarence :)`;
 
   let index = 0;
 

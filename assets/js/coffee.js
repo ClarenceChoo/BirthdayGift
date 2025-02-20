@@ -59,7 +59,7 @@ document.getElementById("coffeeQuestion").addEventListener("submit", function (e
       setTimeout(showFinalMessage, 1500);
     })
     .catch(error => {
-      document.getElementById("formMessage").textContent = "There was an error submitting the form.";
+      document.getElementById("formMessage").textContent = "Error, try again.";
       console.error("Error:", error);
     });
 });

@@ -381,7 +381,9 @@ for (let i = 0; i < opts.strings.length; i++) {
     let letterWidth = ctx.measureText(letter).width;
     let letterX = startX + runningOffset + letterWidth / 2;
     runningOffset += letterWidth;
-    letters.push(new Letter(letter, letterX, letterY));
+    if (letter !== " ") {  // Only animate non-space characters
+      letters.push(new Letter(letter, letterX, letterY));
+    }
   }
 }
 
