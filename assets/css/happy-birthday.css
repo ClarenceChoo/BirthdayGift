@@ -297,6 +297,7 @@ body {
   z-index: 2;
   opacity: 0;              /* Start hidden */
   transition: opacity 1.5s ease-in-out;
+  overflow: visible;
 }
 
 #coffeeForm p {
@@ -304,8 +305,15 @@ body {
   margin-bottom: 20px;
 }
 
+/* Button Wrapper */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* Ensure a gap between buttons */
+  flex-wrap: wrap;  /* In case they need to wrap on small screens */
+}
+
 #coffeeForm button {
-  background-color: #00bcd4;           /* Same style as your other buttons */
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -315,6 +323,14 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   margin: 10px;
   transition: transform 0.3s ease;
+}
+
+#yesBtn {
+  background-color: #28a745;  /* A pleasant, vibrant green */
+}
+
+#noBtn {
+  background-color: #e74c3c;  /* A nice, inviting red */
 }
 
 /* Final Message Section Styling */
