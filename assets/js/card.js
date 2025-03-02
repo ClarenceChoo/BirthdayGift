@@ -7,7 +7,7 @@
   
 Happy 21st Birthday!
 
-Today, I want to celebrate the most wonderful person I know. 
+Today, I want to celebrate the birthday of the most wonderful person I know. 
 Your dedication to volunteering and helping others is truly amazing, they're constant reminders of how beautiful the world can be. 
 Even though we don't talk every day, every interaction with you fills me with hope warms my heart.
 To making more memories with you, I hope this new year brings you countless moments of joy and adventures!
